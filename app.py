@@ -65,7 +65,7 @@ def user_input_features():
 input_df = user_input_features()
 
 st.subheader("Features")
-st.dataframe(input_df, use_container_width=True)
+st.dataframe(input_df, width="stretch")
 
 if st.button("Predict"):
     prob = model.predict_proba(input_df)[0][1]
